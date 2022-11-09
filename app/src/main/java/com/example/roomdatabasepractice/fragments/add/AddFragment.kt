@@ -26,13 +26,11 @@ class AddFragment : Fragment() {
     ): View {
         binding = FragmentAddBinding.inflate(inflater, container, false)
 
-//        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
-//
-//        binding.addBtn.setOnClickListener {
-//            insertDataToDatabase()
-//        }
+        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        binding.addBtn.setOnClickListener {
+            insertDataToDatabase()
+        }
 
         return binding.root
     }
