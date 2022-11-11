@@ -28,15 +28,15 @@ class ListFragment : Fragment() {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
 
-        val recyclerView = binding.recyclerView
-        val adapter = UserListAdapter()
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+//        val recyclerView = binding.recyclerView
+//        val adapter = UserListAdapter()
+//        recyclerView.adapter = adapter
+//        recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
 
-        mUserViewMode = ViewModelProvider(this)[UserViewModel::class.java]
-        mUserViewMode.allWords.observe(
-            viewLifecycleOwner,
-            Observer { user -> user?.let { adapter.setData(user) } })
+//        mUserViewMode = ViewModelProvider(this)[UserViewModel::class.java]
+//        mUserViewMode.allWords.observe(
+//            viewLifecycleOwner,
+//            Observer { user -> user?.let { adapter.setData(user) } })
 
         return binding.root
     }
